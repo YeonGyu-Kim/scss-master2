@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caladea&display=swap");
+@import "_variables.scss";
+@import "_titles.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @extend %miniTitle;
+}
+.body {
+  font-family: "Caladea";
+  padding-top: 70px;
+}
+
+body > *:not(.footer) {
+  padding: 0px 70px;
+}
+
+.header {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  ul {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 10px;
+    @extend %miniTitle;
+    &:first-child {
+      li {
+        margin-right: 60px;
+      }
+    }
+  }
+}
+.hero {
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("https://cdn.shopify.com/s/files/1/0086/4865/4895/files/005_c91d6895-4db1-4430-be43-95df40980c26_1600x929_crop_center.jpeg?v=1592966359");
+
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  margin: 0px $sideSpace;
+  margin-bottom: 80px;
+  h4 {
+    @extend %miniTitle;
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-size: 40px;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  a {
+    width: 30%;
+    background-color: none;
+    border: 1px solid white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    @extend %miniTitle;
+    font-size: 10px;
+    transition: color 0.3s linear, background 0, 3s linear;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.under-hero {
+  height: 50vh;
+  display: flex;
+  width: 100%;
+  margin-bottom: 80px;
+  .under-hero__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h4 {
+      @extend %miniTitle;
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    a {
+      border: 1px solid black;
+      padding: 20px;
+    }
+  }
+  img,
+  div {
+    width: 50%;
+  }
+}
